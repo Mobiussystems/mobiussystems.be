@@ -238,6 +238,24 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
+// Brevo schakelt sleutels uit na 90 dagen zonder gebruik. Een wekelijkse,
+// alleen-lezen opvraging houdt de sleutel actief en meldt problemen in het logboek.
+async function keepAlive() {
+  if (DRY_RUN) return;
+  try {
+    const res = await fetch('https://api.brevo.com/v3/smtp/statistics/aggregatedReport?days=1', {
+      headers: { 'api-key': API_KEY, accept: 'application/json' },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (res.ok) console.log('Brevo-sleutel gecontroleerd: in orde');
+    else console.error(`Let op: Brevo-sleutel gaf ${res.status} bij de wekelijkse controle`);
+  } catch (e) {
+    console.error('Let op: Brevo niet bereikbaar bij de wekelijkse controle:', e.message);
+  }
+}
+setTimeout(keepAlive, 60 * 1000).unref();
+setInterval(keepAlive, 7 * 24 * HOUR).unref();
+
 server.listen(PORT, HOST, () => {
   console.log(`Contactserver luistert op http://${HOST}:${PORT}${DRY_RUN ? ' (DRY_RUN)' : ''}`);
 });
