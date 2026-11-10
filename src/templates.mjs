@@ -188,18 +188,20 @@ function heroFigure(lang) {
   const labels = pts
     .map(([, , x, y, anchor], i) => `<text x="${x}" y="${y}" text-anchor="${anchor}" class="fig-label"><tspan class="fig-num">${pad(i + 1)}</tspan> ${esc(f.stappen[i].toUpperCase())}</text>`)
     .join('');
+  // De volledige lus in één pad, zodat de lijn in het midden vloeiend doorloopt.
   const loop =
-    'M300 150 C 250 70, 80 60, 80 150 C 80 240, 250 230, 300 150 C 350 70, 520 60, 520 150 C 520 240, 350 230, 300 150';
-  const left = 'M300 150 C 250 70, 80 60, 80 150 C 80 240, 250 230, 300 150';
-  const right = 'M300 150 C 350 70, 520 60, 520 150 C 520 240, 350 230, 300 150';
+    'M300 150 C 250 70, 80 60, 80 150 C 80 240, 250 230, 300 150 C 350 70, 520 60, 520 150 C 520 240, 350 230, 300 150 Z';
+  // Kort stuk van de ene streng rond het kruispunt, bovenop getekend met een witte
+  // rand eromheen: zo loopt de band zichtbaar over zichzelf heen, zoals een möbiusband.
+  const over =
+    'M257.92 189.36 C 275.20 179.20, 290.00 166.00, 300.00 150.00 C 310.00 134.00, 324.80 120.80, 342.08 110.64';
   return `<figure class="hero-figure">
       <svg class="hero-svg" viewBox="0 0 600 290" role="img" aria-label="${esc(f.aria)}" data-hero-svg>
-        <path d="${left}" class="fig-band"/>
-        <path d="${left}" class="fig-line"/>
-        <path d="${right}" class="fig-gap"/>
-        <path d="${right}" class="fig-band"/>
-        <path d="${right}" class="fig-line"/>
-        <path id="fig-loop" d="${loop}" fill="none" stroke="none"/>
+        <path id="fig-loop" d="${loop}" class="fig-band" fill="none"/>
+        <path d="${loop}" class="fig-line" fill="none"/>
+        <path d="${over}" class="fig-gap" fill="none"/>
+        <path d="${over}" class="fig-band" fill="none"/>
+        <path d="${over}" class="fig-line" fill="none"/>
         ${dots}
         <circle r="4" class="fig-runner"><animateMotion dur="14s" repeatCount="indefinite" rotate="auto"><mpath href="#fig-loop"/></animateMotion></circle>
         ${labels}

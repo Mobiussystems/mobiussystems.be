@@ -511,7 +511,7 @@ a {
   fill: none;
   stroke: var(--tint-2);
   stroke-width: 24;
-  stroke-linecap: round;
+  stroke-linecap: butt;
 }
 .fig-line {
   fill: none;
