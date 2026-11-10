@@ -1,9 +1,13 @@
 {
-  "label": { "nl": "Over", "fr": "À propos", "en": "About" },
+  "label": {
+    "nl": "Over",
+    "fr": "À propos",
+    "en": "About"
+  },
   "titel": {
-    "nl": "Hallo, ik ben Aiko.",
-    "fr": "Bonjour, je suis Aiko.",
-    "en": "Hi, I'm Aiko."
+    "nl": "Hallo, ik ben Aiko!",
+    "fr": "Bonjour, je suis Aiko!",
+    "en": "Hi, I'm Aiko!"
   },
   "foto": "/media/portret-aiko.jpg",
   "fotoAlt": {
