@@ -1,0 +1,17 @@
+{
+  "name": "mobiussystems-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website van Mobius Systems (mobiussystems.be)",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "contact:test": "DRY_RUN=1 node server/contact.mjs"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

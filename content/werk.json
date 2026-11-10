@@ -1,0 +1,189 @@
+{
+  "label": { "nl": "Werk", "fr": "Réalisations", "en": "Work" },
+  "titel": {
+    "nl": "Een greep uit recent werk",
+    "fr": "Quelques réalisations récentes",
+    "en": "A selection of recent work"
+  },
+  "intro": {
+    "nl": "Geen sjablonen of voorbeeldprojecten: dit zijn tools die ik voor echte klanten bouwde, van ontwerp tot hosting.",
+    "fr": "Pas de modèles ni de projets fictifs : ce sont des outils que j'ai créés pour de vrais clients, du design à l'hébergement.",
+    "en": "No templates or sample projects: these are tools I built for real clients, from design to hosting."
+  },
+  "cases": [
+    {
+      "zichtbaar": true,
+      "categorie": {
+        "nl": "Webapp · Aalst",
+        "fr": "Application web · Alost",
+        "en": "Web app · Aalst"
+      },
+      "titel": {
+        "nl": "Bestel- en betaalplatform voor een spaghettifestijn",
+        "fr": "Plateforme de commande et de paiement pour un souper spaghetti",
+        "en": "Ordering and payment platform for a spaghetti dinner"
+      },
+      "klant": {
+        "nl": "Voor een carnavalsvereniging uit Aalst",
+        "fr": "Pour une association carnavalesque d'Alost",
+        "en": "For a carnival society in Aalst"
+      },
+      "beschrijving": {
+        "nl": "Een carnavalsvereniging wilde bestellingen en betalingen voor haar eetfestijn online regelen, zonder dure platformen. Ik bouwde een bestelapp op maat en regelde alles errond: online betalingen, domein, e-mails en hosting.",
+        "fr": "Une association carnavalesque voulait gérer en ligne les commandes et les paiements de son souper spaghetti, sans plateformes coûteuses. J'ai développé une application de commande sur mesure et tout réglé autour : paiements en ligne, nom de domaine, e-mails et hébergement.",
+        "en": "A carnival society wanted to handle orders and payments for its spaghetti dinner online, without expensive platforms. I built a custom ordering app and took care of everything around it: online payments, domain, email and hosting."
+      },
+      "punten": [
+        {
+          "nl": "Gerechten en porties kiezen, online betalen via Stripe",
+          "fr": "Choix des plats et des portions, paiement en ligne via Stripe",
+          "en": "Choose dishes and portions, pay online via Stripe"
+        },
+        {
+          "nl": "Bevestigingsmail met persoonlijke QR-code",
+          "fr": "E-mail de confirmation avec QR code personnel",
+          "en": "Confirmation email with a personal QR code"
+        },
+        {
+          "nl": "Leden scannen de QR-code bij afhaling en zien meteen wat besteld en betaald is",
+          "fr": "Les membres scannent le QR code au retrait et voient immédiatement ce qui a été commandé et payé",
+          "en": "Members scan the QR code at pickup and instantly see what was ordered and paid"
+        },
+        {
+          "nl": "Levering enkel binnen 7 km van het centrum, automatisch gecontroleerd",
+          "fr": "Livraison uniquement dans un rayon de 7 km du centre, vérifiée automatiquement",
+          "en": "Delivery only within 7 km of the town centre, checked automatically"
+        }
+      ],
+      "status": "live",
+      "statusTekst": {
+        "nl": "Live sinds oktober 2026",
+        "fr": "En ligne depuis octobre 2026",
+        "en": "Live since October 2026"
+      },
+      "resultaat": { "nl": "", "fr": "", "en": "" },
+      "geleverd": {
+        "nl": "Webapp · Betalingen · E-mail · Hosting",
+        "fr": "Application web · Paiements · E-mail · Hébergement",
+        "en": "Web app · Payments · Email · Hosting"
+      },
+      "weergave": "telefoon",
+      "schermen": [
+        {
+          "afbeelding": "/media/bestelapp-start.png",
+          "bijschrift": { "nl": "Bestellen", "fr": "Commander", "en": "Ordering" },
+          "alt": {
+            "nl": "Startscherm van de bestelapp met de knop Bestel nu",
+            "fr": "Écran d'accueil de l'application avec le bouton Commander",
+            "en": "Start screen of the ordering app with the Order now button"
+          }
+        },
+        {
+          "afbeelding": "/media/bestelapp-bestelling.png",
+          "bijschrift": { "nl": "Gegevens en levering", "fr": "Coordonnées et livraison", "en": "Details and delivery" },
+          "alt": {
+            "nl": "Bestelling met totaalbedrag en keuze tussen afhalen en thuislevering",
+            "fr": "Commande avec montant total et choix entre retrait et livraison",
+            "en": "Order with total amount and a choice between pickup and delivery"
+          }
+        },
+        {
+          "afbeelding": "/media/bestelapp-scannen.png",
+          "bijschrift": { "nl": "Scannen bij afhaling", "fr": "Scan au retrait", "en": "Scanning at pickup" },
+          "alt": {
+            "nl": "Scanmodus waarmee leden de QR-code van een klant scannen",
+            "fr": "Mode scan permettant aux membres de scanner le QR code d'un client",
+            "en": "Scan mode that members use to scan a customer's QR code"
+          }
+        }
+      ]
+    },
+    {
+      "zichtbaar": false,
+      "categorie": {
+        "nl": "Website & webshop",
+        "fr": "Site web & boutique en ligne",
+        "en": "Website & web shop"
+      },
+      "titel": {
+        "nl": "Website met afspraken en webshop voor een garage",
+        "fr": "Site avec prise de rendez-vous et boutique en ligne pour un garage",
+        "en": "Website with bookings and a web shop for a car garage"
+      },
+      "klant": {
+        "nl": "Voor een onafhankelijke garage",
+        "fr": "Pour un garage indépendant",
+        "en": "For an independent garage"
+      },
+      "beschrijving": {
+        "nl": "Een garage had nood aan een site waar klanten zelf een afspraak maken, hun wagen opvolgen en onderhoudsproducten bestellen.",
+        "fr": "Un garage avait besoin d'un site où les clients prennent eux-mêmes rendez-vous, suivent leur véhicule et commandent des produits d'entretien.",
+        "en": "A garage needed a site where customers book their own appointments, follow up on their car and order maintenance products."
+      },
+      "punten": [
+        {
+          "nl": "Klantaccounts met online afspraken",
+          "fr": "Comptes clients avec prise de rendez-vous en ligne",
+          "en": "Customer accounts with online booking"
+        },
+        {
+          "nl": "Status van het voertuig live opvolgen",
+          "fr": "Suivi en direct de l'état du véhicule",
+          "en": "Live vehicle status tracking"
+        },
+        {
+          "nl": "Webshop voor olie, koelvloeistof en ruitenvloeistof",
+          "fr": "Boutique en ligne pour huile, liquide de refroidissement et lave-glace",
+          "en": "Web shop for oil, coolant and screenwash"
+        },
+        {
+          "nl": "Volledig in vier talen: Nederlands, Frans, Engels en Turks",
+          "fr": "Entièrement en quatre langues : néerlandais, français, anglais et turc",
+          "en": "Fully in four languages: Dutch, French, English and Turkish"
+        }
+      ],
+      "status": "bezig",
+      "statusTekst": {
+        "nl": "In afwerking",
+        "fr": "En finalisation",
+        "en": "In final stage"
+      },
+      "resultaat": { "nl": "", "fr": "", "en": "" },
+      "geleverd": {
+        "nl": "Website · Boekingen · Webshop · Hosting",
+        "fr": "Site web · Réservations · Boutique · Hébergement",
+        "en": "Website · Bookings · Web shop · Hosting"
+      },
+      "weergave": "browser",
+      "schermen": []
+    }
+  ],
+  "labo": {
+    "titel": { "nl": "Uit het labo", "fr": "Au labo", "en": "From the lab" },
+    "intro": {
+      "nl": "Eigen projecten waarin ik nieuwe technieken uittest voor ik ze bij klanten inzet.",
+      "fr": "Des projets personnels où je teste de nouvelles techniques avant de les utiliser chez mes clients.",
+      "en": "Personal projects where I test new techniques before using them for clients."
+    },
+    "items": [
+      {
+        "label": { "nl": "Webapp · Sport", "fr": "Application web · Sport", "en": "Web app · Fitness" },
+        "titel": { "nl": "Primal Fitness Tracker", "fr": "Primal Fitness Tracker", "en": "Primal Fitness Tracker" },
+        "tekst": {
+          "nl": "Trainingen loggen tijdens het sporten: rondes, gewichten, volume en reeksen, met accounts op uitnodiging.",
+          "fr": "Enregistrer ses entraînements en pleine séance : tours, charges, volume et séries, avec des comptes sur invitation.",
+          "en": "Log workouts while training: rounds, weights, volume and streaks, with invite-only accounts."
+        }
+      },
+      {
+        "label": { "nl": "Infrastructuur", "fr": "Infrastructure", "en": "Infrastructure" },
+        "titel": { "nl": "Eigen serverinfrastructuur", "fr": "Infrastructure serveur personnelle", "en": "Own server infrastructure" },
+        "tekst": {
+          "nl": "Virtualisatie met Proxmox, inloggen met passkeys, monitoring en automatische back-ups voor elke app.",
+          "fr": "Virtualisation avec Proxmox, connexion par passkeys, monitoring et sauvegardes automatiques pour chaque application.",
+          "en": "Virtualisation with Proxmox, passkey sign-in, monitoring and automatic backups for every app."
+        }
+      }
+    ]
+  }
+}

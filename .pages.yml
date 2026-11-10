@@ -1,0 +1,615 @@
+# Pages CMS — beheer de inhoud van mobiussystems.be via https://app.pagescms.org
+# Elke tekst heeft een veld per taal (Nederlands, Français, English).
+media:
+  input: media
+  output: /media
+content:
+  - name: instellingen
+    label: "Instellingen & contactgegevens"
+    type: file
+    path: content/instellingen.json
+    format: json
+    fields:
+      - name: bedrijfsnaam
+        label: "Bedrijfsnaam"
+        type: string
+      - name: zaakvoerder
+        label: "Zaakvoerder"
+        type: string
+      - name: email
+        label: "E-mailadres"
+        type: string
+      - name: telefoon
+        label: "Telefoonnummer"
+        type: string
+      - name: straat
+        label: "Straat en nummer"
+        type: string
+      - name: postcode
+        label: "Postcode"
+        type: string
+      - name: gemeente
+        label: "Gemeente"
+        type: string
+      - name: ondernemingsnummer
+        label: "Ondernemingsnummer"
+        type: string
+      - name: btwNummer
+        label: "Btw-nummer"
+        type: string
+      - name: seo
+        label: "Google (titel en beschrijving)"
+        type: object
+        fields:
+          - name: titel
+            label: "Paginatitel"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: beschrijving
+            label: "Beschrijving"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: text }
+              - { name: fr, label: "Français", type: text }
+              - { name: en, label: "English", type: text }
+  - name: hero
+    label: "Bovenaan (hero & kerngegevens)"
+    type: file
+    path: content/hero.json
+    format: json
+    fields:
+      - name: label
+        label: "Klein label boven de titel"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: titel
+        label: "Grote titel"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: text }
+          - { name: fr, label: "Français", type: text }
+          - { name: en, label: "English", type: text }
+      - name: intro
+        label: "Inleiding"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: text }
+          - { name: fr, label: "Français", type: text }
+          - { name: en, label: "English", type: text }
+      - name: knopPrimair
+        label: "Blauwe knop"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: knopSecundair
+        label: "Witte knop"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: kerngegevens
+        label: "Kerngegevens (strook onder de hero)"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.titel.nl}"
+        fields:
+          - name: titel
+            label: "Titel"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: tekst
+            label: "Tekst"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: text }
+              - { name: fr, label: "Français", type: text }
+              - { name: en, label: "English", type: text }
+  - name: werk
+    label: "Werk (cases & labo)"
+    type: file
+    path: content/werk.json
+    format: json
+    fields:
+      - name: label
+        label: "Label"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: titel
+        label: "Titel"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: intro
+        label: "Inleiding"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: text }
+          - { name: fr, label: "Français", type: text }
+          - { name: en, label: "English", type: text }
+      - name: cases
+        label: "Cases"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.titel.nl}"
+        fields:
+          - name: zichtbaar
+            label: "Tonen op de site"
+            type: boolean
+            default: true
+          - name: categorie
+            label: "Categorie (bv. Webapp · Aalst)"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: titel
+            label: "Titel"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: klant
+            label: "Klant (bv. Voor een garage uit …)"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: beschrijving
+            label: "Beschrijving"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: text }
+              - { name: fr, label: "Français", type: text }
+              - { name: en, label: "English", type: text }
+          - name: punten
+            label: "Opsomming"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.nl}"
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: status
+            label: "Status"
+            type: select
+            options:
+              values:
+                - name: live
+                  label: "Live (groen bolletje)"
+                - name: bezig
+                  label: "Bezig (oranje bolletje)"
+          - name: statusTekst
+            label: "Statustekst (bv. Live sinds …)"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: resultaat
+            label: "Resultaat (leeg laten = niet tonen)"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: geleverd
+            label: "Geleverd"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: weergave
+            label: "Weergave screenshots"
+            type: select
+            options:
+              values:
+                - name: telefoon
+                  label: "Gsm-screenshots naast elkaar"
+                - name: browser
+                  label: "Eén screenshot in browserkader"
+          - name: schermen
+            label: "Screenshots"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.bijschrift.nl}"
+            fields:
+              - name: afbeelding
+                label: "Afbeelding"
+                type: image
+                options:
+                  extensions: [jpg, jpeg, png, webp]
+              - name: bijschrift
+                label: "Bijschrift"
+                type: object
+                fields:
+                  - { name: nl, label: "Nederlands", type: string }
+                  - { name: fr, label: "Français", type: string }
+                  - { name: en, label: "English", type: string }
+              - name: alt
+                label: "Beschrijving voor blinden en Google"
+                type: object
+                fields:
+                  - { name: nl, label: "Nederlands", type: string }
+                  - { name: fr, label: "Français", type: string }
+                  - { name: en, label: "English", type: string }
+      - name: labo
+        label: "Uit het labo"
+        type: object
+        fields:
+          - name: titel
+            label: "Titel"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: intro
+            label: "Inleiding"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: text }
+              - { name: fr, label: "Français", type: text }
+              - { name: en, label: "English", type: text }
+          - name: items
+            label: "Projecten"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.titel.nl}"
+            fields:
+              - name: label
+                label: "Label"
+                type: object
+                fields:
+                  - { name: nl, label: "Nederlands", type: string }
+                  - { name: fr, label: "Français", type: string }
+                  - { name: en, label: "English", type: string }
+              - name: titel
+                label: "Titel"
+                type: object
+                fields:
+                  - { name: nl, label: "Nederlands", type: string }
+                  - { name: fr, label: "Français", type: string }
+                  - { name: en, label: "English", type: string }
+              - name: tekst
+                label: "Tekst"
+                type: object
+                fields:
+                  - { name: nl, label: "Nederlands", type: text }
+                  - { name: fr, label: "Français", type: text }
+                  - { name: en, label: "English", type: text }
+  - name: diensten
+    label: "Diensten & prijzen"
+    type: file
+    path: content/diensten.json
+    format: json
+    fields:
+      - name: label
+        label: "Label"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: titel
+        label: "Titel"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: intro
+        label: "Inleiding"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: text }
+          - { name: fr, label: "Français", type: text }
+          - { name: en, label: "English", type: text }
+      - name: items
+        label: "Diensten"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.titel.nl}"
+        fields:
+          - name: icoon
+            label: "Icoon"
+            type: select
+            options:
+              values:
+                - name: website
+                  label: "Website"
+                - name: webapp
+                  label: "Webapp"
+                - name: hosting
+                  label: "Hosting"
+          - name: titel
+            label: "Titel"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: tekst
+            label: "Tekst"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: text }
+              - { name: fr, label: "Français", type: text }
+              - { name: en, label: "English", type: text }
+          - name: punten
+            label: "Opsomming"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.nl}"
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: prijs
+            label: "Prijs"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+  - name: werkwijze
+    label: "Werkwijze"
+    type: file
+    path: content/werkwijze.json
+    format: json
+    fields:
+      - name: label
+        label: "Label"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: titel
+        label: "Titel"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: intro
+        label: "Inleiding"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: text }
+          - { name: fr, label: "Français", type: text }
+          - { name: en, label: "English", type: text }
+      - name: stappen
+        label: "Stappen"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.titel.nl}"
+        fields:
+          - name: titel
+            label: "Titel"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: string }
+              - { name: fr, label: "Français", type: string }
+              - { name: en, label: "English", type: string }
+          - name: tekst
+            label: "Tekst"
+            type: object
+            fields:
+              - { name: nl, label: "Nederlands", type: text }
+              - { name: fr, label: "Français", type: text }
+              - { name: en, label: "English", type: text }
+  - name: over
+    label: "Over mij"
+    type: file
+    path: content/over.json
+    format: json
+    fields:
+      - name: label
+        label: "Label"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: titel
+        label: "Titel"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: foto
+        label: "Portretfoto"
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp]
+      - name: fotoAlt
+        label: "Beschrijving van de foto"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: tekst1
+        label: "Eerste alinea"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: text }
+          - { name: fr, label: "Français", type: text }
+          - { name: en, label: "English", type: text }
+      - name: tekst2
+        label: "Tweede alinea"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: text }
+          - { name: fr, label: "Français", type: text }
+          - { name: en, label: "English", type: text }
+      - name: talen
+        label: "Talen"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: regio
+        label: "Regio"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+  - name: contact
+    label: "Contact"
+    type: file
+    path: content/contact.json
+    format: json
+    fields:
+      - name: label
+        label: "Label"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: titel
+        label: "Titel"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: string }
+          - { name: fr, label: "Français", type: string }
+          - { name: en, label: "English", type: string }
+      - name: intro
+        label: "Inleiding"
+        type: object
+        fields:
+          - { name: nl, label: "Nederlands", type: text }
+          - { name: fr, label: "Français", type: text }
+          - { name: en, label: "English", type: text }
+  - name: privacy-nl
+    label: "Privacyverklaring (NL)"
+    type: file
+    path: content/juridisch/privacy.nl.md
+    format: yaml-frontmatter
+    fields:
+      - name: titel
+        label: "Titel"
+        type: string
+      - name: bijgewerkt
+        label: "Laatst bijgewerkt"
+        type: date
+      - name: body
+        label: "Tekst"
+        type: rich-text
+  - name: privacy-fr
+    label: "Privacyverklaring (FR)"
+    type: file
+    path: content/juridisch/privacy.fr.md
+    format: yaml-frontmatter
+    fields:
+      - name: titel
+        label: "Titel"
+        type: string
+      - name: bijgewerkt
+        label: "Laatst bijgewerkt"
+        type: date
+      - name: body
+        label: "Tekst"
+        type: rich-text
+  - name: privacy-en
+    label: "Privacyverklaring (EN)"
+    type: file
+    path: content/juridisch/privacy.en.md
+    format: yaml-frontmatter
+    fields:
+      - name: titel
+        label: "Titel"
+        type: string
+      - name: bijgewerkt
+        label: "Laatst bijgewerkt"
+        type: date
+      - name: body
+        label: "Tekst"
+        type: rich-text
+  - name: voorwaarden-nl
+    label: "Algemene voorwaarden (NL)"
+    type: file
+    path: content/juridisch/voorwaarden.nl.md
+    format: yaml-frontmatter
+    fields:
+      - name: titel
+        label: "Titel"
+        type: string
+      - name: bijgewerkt
+        label: "Laatst bijgewerkt"
+        type: date
+      - name: body
+        label: "Tekst"
+        type: rich-text
+  - name: voorwaarden-fr
+    label: "Algemene voorwaarden (FR)"
+    type: file
+    path: content/juridisch/voorwaarden.fr.md
+    format: yaml-frontmatter
+    fields:
+      - name: titel
+        label: "Titel"
+        type: string
+      - name: bijgewerkt
+        label: "Laatst bijgewerkt"
+        type: date
+      - name: body
+        label: "Tekst"
+        type: rich-text
+  - name: voorwaarden-en
+    label: "Algemene voorwaarden (EN)"
+    type: file
+    path: content/juridisch/voorwaarden.en.md
+    format: yaml-frontmatter
+    fields:
+      - name: titel
+        label: "Titel"
+        type: string
+      - name: bijgewerkt
+        label: "Laatst bijgewerkt"
+        type: date
+      - name: body
+        label: "Tekst"
+        type: rich-text

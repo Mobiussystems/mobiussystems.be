@@ -1,0 +1,60 @@
+{
+  "label": { "nl": "Diensten", "fr": "Services", "en": "Services" },
+  "titel": {
+    "nl": "Wat ik voor je kan doen",
+    "fr": "Ce que je peux faire pour vous",
+    "en": "What I can do for you"
+  },
+  "intro": {
+    "nl": "Van een verzorgde website tot een app die je zaak echt vooruithelpt, en het beheer erna.",
+    "fr": "D'un site soigné à une application qui fait vraiment avancer votre activité, et la gestion par la suite.",
+    "en": "From a polished website to an app that genuinely moves your business forward, and the upkeep afterwards."
+  },
+  "items": [
+    {
+      "icoon": "website",
+      "titel": { "nl": "Websites", "fr": "Sites web", "en": "Websites" },
+      "tekst": {
+        "nl": "Een snelle, verzorgde site die vertrouwen wekt en gevonden wordt.",
+        "fr": "Un site rapide et soigné, qui inspire confiance et se trouve facilement.",
+        "en": "A fast, polished site that builds trust and gets found."
+      },
+      "punten": [
+        { "nl": "Ontwerp op maat, geen template", "fr": "Design sur mesure, pas de template", "en": "Custom design, no templates" },
+        { "nl": "Meertalig: Nederlands, Frans, Engels", "fr": "Multilingue : néerlandais, français, anglais", "en": "Multilingual: Dutch, French, English" },
+        { "nl": "Klaar voor Google: snel, mobielvriendelijk en goed vindbaar", "fr": "Prêt pour Google : rapide, adapté au mobile et bien référencé", "en": "Ready for Google: fast, mobile-friendly and easy to find" }
+      ],
+      "prijs": { "nl": "Vanaf € 750 excl. btw", "fr": "À partir de 750 € HTVA", "en": "From €750 excl. VAT" }
+    },
+    {
+      "icoon": "webapp",
+      "titel": { "nl": "Webapps op maat", "fr": "Applications web sur mesure", "en": "Custom web apps" },
+      "tekst": {
+        "nl": "Bestellen, reserveren, inloggen of betalen, gebouwd rond hoe jouw zaak werkt.",
+        "fr": "Commander, réserver, se connecter ou payer : conçu autour du fonctionnement de votre entreprise.",
+        "en": "Ordering, booking, sign-in or payments, built around how your business works."
+      },
+      "punten": [
+        { "nl": "Online betalingen", "fr": "Paiements en ligne", "en": "Online payments" },
+        { "nl": "Klantaccounts en afspraken", "fr": "Comptes clients et rendez-vous", "en": "Customer accounts and appointments" },
+        { "nl": "Koppeling met je bestaande boekingssoftware", "fr": "Connexion à votre logiciel de réservation existant", "en": "Integration with your existing booking software" }
+      ],
+      "prijs": { "nl": "Vanaf € 2.000 excl. btw", "fr": "À partir de 2 000 € HTVA", "en": "From €2,000 excl. VAT" }
+    },
+    {
+      "icoon": "hosting",
+      "titel": { "nl": "Hosting & onderhoud", "fr": "Hébergement & maintenance", "en": "Hosting & maintenance" },
+      "tekst": {
+        "nl": "Ik host en beheer je site. Jij hoeft niets technisch te doen.",
+        "fr": "J'héberge et gère votre site. Vous n'avez rien de technique à faire.",
+        "en": "I host and manage your site. You don't have to do anything technical."
+      },
+      "punten": [
+        { "nl": "SSL en beveiligingsupdates", "fr": "SSL et mises à jour de sécurité", "en": "SSL and security updates" },
+        { "nl": "Automatische back-ups", "fr": "Sauvegardes automatiques", "en": "Automatic backups" },
+        { "nl": "Aanpassingen op vraag", "fr": "Modifications sur demande", "en": "Changes on request" }
+      ],
+      "prijs": { "nl": "Prijs op aanvraag", "fr": "Prix sur demande", "en": "Price on request" }
+    }
+  ]
+}

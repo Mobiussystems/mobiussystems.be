@@ -1,0 +1,50 @@
+# Caddy-configuratie voor mobiussystems.be
+# Caddy regelt automatisch de HTTPS-certificaten (Let's Encrypt).
+
+mobiussystems.be {
+	root * /var/www/mobiussystems.be
+	encode zstd gzip
+
+	# contactformulier
+	handle /api/* {
+		reverse_proxy 127.0.0.1:8787
+	}
+
+	handle {
+		file_server
+	}
+
+	handle_errors {
+		@notfound expression {http.error.status_code} == 404
+		handle @notfound {
+			rewrite * /404.html
+			file_server
+		}
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+		Content-Security-Policy "default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'"
+		-Server
+	}
+
+	@static path /assets/* /media/*
+	header @static Cache-Control "public, max-age=31536000, immutable"
+	@pages not path /assets/* /media/*
+	header @pages Cache-Control "no-cache"
+
+	log {
+		output file /var/log/caddy/mobiussystems.be.log {
+			roll_size 10MiB
+			roll_keep 5
+			roll_keep_for 336h
+		}
+	}
+}
+
+www.mobiussystems.be {
+	redir https://mobiussystems.be{uri} permanent
+}

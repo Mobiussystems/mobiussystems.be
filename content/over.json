@@ -1,0 +1,34 @@
+{
+  "label": { "nl": "Over", "fr": "À propos", "en": "About" },
+  "titel": {
+    "nl": "Hallo, ik ben Aiko.",
+    "fr": "Bonjour, je suis Aiko.",
+    "en": "Hi, I'm Aiko."
+  },
+  "foto": "/media/portret-aiko.jpg",
+  "fotoAlt": {
+    "nl": "Portret van Aiko De Prez",
+    "fr": "Portrait d'Aiko De Prez",
+    "en": "Portrait of Aiko De Prez"
+  },
+  "tekst1": {
+    "nl": "Ik ben technicus van opleiding, met een achtergrond in elektromechanica en onderhoud. Computers, netwerken en software zijn al jaren mijn passie: bij een kmo richtte ik de pc's, het netwerk en de telefonie volledig opnieuw in, en vandaag beheer ik mijn eigen serverinfrastructuur.",
+    "fr": "Je suis technicien de formation, avec un parcours en électromécanique et en maintenance. Les ordinateurs, les réseaux et les logiciels me passionnent depuis des années : dans une PME, j'ai entièrement renouvelé les PC, le réseau et la téléphonie, et aujourd'hui je gère ma propre infrastructure serveur.",
+    "en": "I'm a technician by training, with a background in electromechanics and maintenance. Computers, networks and software have been my passion for years: at a small company I completely rebuilt the PCs, the network and the phone system, and today I run my own server infrastructure."
+  },
+  "tekst2": {
+    "nl": "Met Mobius Systems breng ik dat samen: degelijk technisch werk, helder uitgelegd. Je spreekt altijd rechtstreeks met mij.",
+    "fr": "Avec Mobius Systems, je réunis tout cela : un travail technique solide, expliqué clairement. Vous parlez toujours directement avec moi.",
+    "en": "With Mobius Systems I bring that together: solid technical work, clearly explained. You always deal with me directly."
+  },
+  "talen": {
+    "nl": "Nederlands, Français, English",
+    "fr": "Nederlands, Français, English",
+    "en": "Nederlands, Français, English"
+  },
+  "regio": {
+    "nl": "Grembergen, Oost-Vlaanderen",
+    "fr": "Grembergen, Flandre-Orientale",
+    "en": "Grembergen, East Flanders"
+  }
+}

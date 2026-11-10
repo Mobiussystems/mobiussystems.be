@@ -1,0 +1,12 @@
+[Unit]
+Description=Mobius Systems - site bijwerken vanaf GitHub
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=mobius
+Group=mobius
+WorkingDirectory=/opt/mobiussystems/repo
+ExecStart=/opt/mobiussystems/repo/deploy/update.sh
+TimeoutStartSec=600

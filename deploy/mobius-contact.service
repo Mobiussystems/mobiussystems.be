@@ -1,0 +1,23 @@
+[Unit]
+Description=Mobius Systems - contactformulier
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=mobius
+Group=mobius
+EnvironmentFile=/etc/mobius-contact.env
+ExecStart=/usr/bin/node /opt/mobiussystems/repo/server/contact.mjs
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target

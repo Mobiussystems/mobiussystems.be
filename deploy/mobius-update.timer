@@ -1,0 +1,10 @@
+[Unit]
+Description=Mobius Systems - elke minuut controleren op wijzigingen
+
+[Timer]
+OnBootSec=1min
+OnUnitInactiveSec=1min
+AccuracySec=10s
+
+[Install]
+WantedBy=timers.target

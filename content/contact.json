@@ -1,0 +1,13 @@
+{
+  "label": { "nl": "Contact", "fr": "Contact", "en": "Contact" },
+  "titel": {
+    "nl": "Een project in gedachten?",
+    "fr": "Un projet en tête ?",
+    "en": "Have a project in mind?"
+  },
+  "intro": {
+    "nl": "Vertel kort wat je zoekt. Je krijgt binnen 24 uur een antwoord.",
+    "fr": "Décrivez brièvement ce que vous cherchez. Vous recevrez une réponse dans les 24 heures.",
+    "en": "Tell me briefly what you're looking for. You'll get a reply within 24 hours."
+  }
+}

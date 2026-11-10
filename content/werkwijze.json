@@ -1,0 +1,47 @@
+{
+  "label": { "nl": "Werkwijze", "fr": "Méthode", "en": "Process" },
+  "titel": {
+    "nl": "Eén doorlopend traject",
+    "fr": "Un seul parcours continu",
+    "en": "One continuous journey"
+  },
+  "intro": {
+    "nl": "Zoals een möbiusband: één doorlopende lijn. Je project blijft in dezelfde handen, van het eerste gesprek tot het onderhoud.",
+    "fr": "Comme un ruban de Möbius : une seule ligne continue. Votre projet reste entre les mêmes mains, du premier entretien à la maintenance.",
+    "en": "Like a Möbius strip: one continuous line. Your project stays in the same hands, from the first conversation to maintenance."
+  },
+  "stappen": [
+    {
+      "titel": { "nl": "Kennismaking", "fr": "Premier contact", "en": "Introduction" },
+      "tekst": {
+        "nl": "We bespreken je zaak, je doelen en wat je nodig hebt. Vrijblijvend.",
+        "fr": "Nous parlons de votre activité, de vos objectifs et de vos besoins. Sans engagement.",
+        "en": "We discuss your business, your goals and what you need. No strings attached."
+      }
+    },
+    {
+      "titel": { "nl": "Voorstel", "fr": "Proposition", "en": "Proposal" },
+      "tekst": {
+        "nl": "Je krijgt een duidelijk voorstel met planning en prijs.",
+        "fr": "Vous recevez une proposition claire avec planning et prix.",
+        "en": "You get a clear proposal with timeline and price."
+      }
+    },
+    {
+      "titel": { "nl": "Ontwerp & bouw", "fr": "Design & développement", "en": "Design & build" },
+      "tekst": {
+        "nl": "Tussentijdse demo's houden je mee aan het stuur.",
+        "fr": "Des démos intermédiaires vous gardent aux commandes.",
+        "en": "Demos along the way keep you in the driver's seat."
+      }
+    },
+    {
+      "titel": { "nl": "Live & onderhoud", "fr": "Mise en ligne & maintenance", "en": "Launch & maintenance" },
+      "tekst": {
+        "nl": "Ik zet alles online en blijf je site beheren en verbeteren.",
+        "fr": "Je mets tout en ligne et continue à gérer et améliorer votre site.",
+        "en": "I put everything online and keep managing and improving your site."
+      }
+    }
+  ]
+}

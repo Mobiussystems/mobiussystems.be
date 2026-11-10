@@ -1,0 +1,61 @@
+{
+  "label": {
+    "nl": "Webdesign & webapps — Grembergen, België",
+    "fr": "Webdesign & applications web — Grembergen, Belgique",
+    "en": "Web design & web apps — Grembergen, Belgium"
+  },
+  "titel": {
+    "nl": "Websites en webapps op maat, van eerste idee tot veilige hosting.",
+    "fr": "Des sites et applications web sur mesure, de l'idée à l'hébergement sécurisé.",
+    "en": "Custom websites and web apps, from first idea to secure hosting."
+  },
+  "intro": {
+    "nl": "Mobius Systems ontwerpt, bouwt en onderhoudt digitale tools voor kmo's, zelfstandigen en verenigingen. Eén aanspreekpunt, van het eerste gesprek tot lang na de lancering.",
+    "fr": "Mobius Systems conçoit, développe et entretient des outils numériques pour les PME, indépendants et associations. Un seul interlocuteur, du premier entretien à bien après la mise en ligne.",
+    "en": "Mobius Systems designs, builds and maintains digital tools for small businesses, freelancers and non-profits. One point of contact, from the first conversation to long after launch."
+  },
+  "knopPrimair": {
+    "nl": "Plan een kennismaking",
+    "fr": "Planifier un premier contact",
+    "en": "Book an intro call"
+  },
+  "knopSecundair": {
+    "nl": "Bekijk het werk",
+    "fr": "Voir les réalisations",
+    "en": "See the work"
+  },
+  "kerngegevens": [
+    {
+      "titel": { "nl": "Eén aanspreekpunt", "fr": "Un seul interlocuteur", "en": "One point of contact" },
+      "tekst": {
+        "nl": "Je spreekt rechtstreeks met wie je project bouwt.",
+        "fr": "Vous parlez directement à la personne qui réalise votre projet.",
+        "en": "You talk directly to the person building your project."
+      }
+    },
+    {
+      "titel": { "nl": "Hosting in de EU", "fr": "Hébergé dans l'UE", "en": "Hosted in the EU" },
+      "tekst": {
+        "nl": "Je site draait op Europese servers, door mij beheerd.",
+        "fr": "Votre site tourne sur des serveurs européens, gérés par mes soins.",
+        "en": "Your site runs on European servers, managed by me."
+      }
+    },
+    {
+      "titel": { "nl": "NL · FR · EN", "fr": "NL · FR · EN", "en": "NL · FR · EN" },
+      "tekst": {
+        "nl": "Gesprekken en websites in drie talen.",
+        "fr": "Échanges et sites web en trois langues.",
+        "en": "Conversations and websites in three languages."
+      }
+    },
+    {
+      "titel": { "nl": "Uit Grembergen", "fr": "Basé à Grembergen", "en": "Based in Grembergen" },
+      "tekst": {
+        "nl": "Dichtbij voor ondernemers in Oost-Vlaanderen en daarbuiten.",
+        "fr": "Proche des entrepreneurs de Flandre-Orientale et d'ailleurs.",
+        "en": "Close to businesses in East Flanders and beyond."
+      }
+    }
+  ]
+}

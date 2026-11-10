@@ -1,0 +1,23 @@
+{
+  "bedrijfsnaam": "Mobius Systems",
+  "zaakvoerder": "Aiko De Prez",
+  "email": "aiko@mobiussystems.be",
+  "telefoon": "+32 468 26 60 93",
+  "straat": "Verbindingsstraat 39",
+  "postcode": "9200",
+  "gemeente": "Grembergen",
+  "ondernemingsnummer": "1044.464.524",
+  "btwNummer": "BE 1044.464.524",
+  "seo": {
+    "titel": {
+      "nl": "Mobius Systems — Websites en webapps op maat",
+      "fr": "Mobius Systems — Sites et applications web sur mesure",
+      "en": "Mobius Systems — Custom websites and web apps"
+    },
+    "beschrijving": {
+      "nl": "Mobius Systems ontwerpt, bouwt en host websites en webapps op maat voor kmo's, zelfstandigen en verenigingen. Eén aanspreekpunt uit Grembergen.",
+      "fr": "Mobius Systems conçoit, développe et héberge des sites et applications web sur mesure pour PME, indépendants et associations. Un seul interlocuteur, basé à Grembergen.",
+      "en": "Mobius Systems designs, builds and hosts custom websites and web apps for small businesses, freelancers and non-profits. One point of contact, based in Grembergen, Belgium."
+    }
+  }
+}
