@@ -99,15 +99,40 @@ say "Site bouwen"
 sudo -u mobius -H env FORCE=1 "$BASE/repo/deploy/update.sh"
 
 say "Caddy instellen"
-if [ -f /etc/caddy/Caddyfile ] && ! cmp -s /etc/caddy/Caddyfile "$BASE/repo/deploy/Caddyfile"; then
-  cp /etc/caddy/Caddyfile "/etc/caddy/Caddyfile.backup-$(date +%Y%m%d%H%M%S)"
-fi
-install -m 644 "$BASE/repo/deploy/Caddyfile" /etc/caddy/Caddyfile
+# De site krijgt een eigen bestand. Een bestaande Caddyfile (bv. van De Werf)
+# blijft staan: er komt enkel één import-regel bij.
+SITE_CONF=/etc/caddy/mobiussystems.caddy
+IMPORT_LINE="import $SITE_CONF"
+install -m 644 "$BASE/repo/deploy/mobiussystems.caddy" "$SITE_CONF"
 mkdir -p /var/log/caddy
 chown caddy:caddy /var/log/caddy
-caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile >/dev/null
+
+BACKUP=""
+if [ -f /etc/caddy/Caddyfile ]; then
+  BACKUP="/etc/caddy/Caddyfile.backup-$(date +%Y%m%d%H%M%S)"
+  cp /etc/caddy/Caddyfile "$BACKUP"
+fi
+if [ ! -f /etc/caddy/Caddyfile ] || grep -q '/usr/share/caddy' /etc/caddy/Caddyfile; then
+  # standaardbestand van het Caddy-pakket: vervangen
+  printf '# Caddy-configuratie van deze server\n%s\n' "$IMPORT_LINE" > /etc/caddy/Caddyfile
+elif ! grep -qxF "$IMPORT_LINE" /etc/caddy/Caddyfile; then
+  printf '\n# Website van Mobius Systems (mobiussystems.be)\n%s\n' "$IMPORT_LINE" >> /etc/caddy/Caddyfile
+fi
+
+if ! caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile >/dev/null 2>&1; then
+  warn "De Caddy-configuratie is ongeldig. De vorige versie wordt teruggezet."
+  caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile 2>&1 | tail -5 || true
+  [ -n "$BACKUP" ] && cp "$BACKUP" /etc/caddy/Caddyfile
+  exit 1
+fi
 systemctl enable caddy >/dev/null 2>&1
 systemctl reload caddy 2>/dev/null || systemctl restart caddy
+
+# Firewall: poort 80 en 443 open laten als ufw actief is
+if command -v ufw >/dev/null && ufw status 2>/dev/null | grep -q 'Status: active'; then
+  ufw allow 80/tcp >/dev/null
+  ufw allow 443/tcp >/dev/null
+fi
 
 say "Diensten starten"
 systemctl daemon-reload

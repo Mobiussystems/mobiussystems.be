@@ -21,7 +21,7 @@ Pages CMS (browser/gsm) ──► GitHub (deze repository) ──► VPS haalt e
 | `src/` | Opmaak (`styles.css`), HTML-sjablonen, vaste labels per taal (`i18n.mjs`) en het kleine script. |
 | `static/` | Lettertypes, favicon, logo's en de deelafbeelding (`og.png`). |
 | `server/contact.mjs` | De contactformulier-server (stuurt berichten via Brevo). |
-| `deploy/` | Alles voor de VPS: installatiescript, Caddy, systemd-diensten. |
+| `deploy/` | Alles voor de VPS: installatiescript, Caddy-site, systemd-diensten. |
 | `build.mjs` | Bouwt de site naar `dist/`. Geen pakketten nodig. |
 | `.pages.yml` | Instellingen van Pages CMS (welke velden je ziet). |
 
@@ -69,5 +69,5 @@ sudo systemctl start mobius-update     # nu meteen bijwerken
 ## Beveiliging en privacy
 
 - Geen cookies, geen trackers, geen externe lettertypes of scripts.
-- Strikte Content-Security-Policy (zie `deploy/Caddyfile`): gebruik dus geen inline `style=""` of `<script>` in sjablonen.
+- Strikte Content-Security-Policy (zie `deploy/mobiussystems.caddy`): gebruik dus geen inline `style=""` of `<script>` in sjablonen.
 - Het contactformulier heeft een spamval, een limiet per IP-adres en bewaart zelf geen berichten.

@@ -1,4 +1,4 @@
-# Caddy-configuratie voor mobiussystems.be
+# Caddy-site voor mobiussystems.be (wordt geïmporteerd vanuit /etc/caddy/Caddyfile)
 # Caddy regelt automatisch de HTTPS-certificaten (Let's Encrypt).
 
 mobiussystems.be {
