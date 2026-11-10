@@ -119,14 +119,26 @@ elif ! grep -qxF "$IMPORT_LINE" /etc/caddy/Caddyfile; then
   printf '\n# Website van Mobius Systems (mobiussystems.be)\n%s\n' "$IMPORT_LINE" >> /etc/caddy/Caddyfile
 fi
 
-if ! caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile >/dev/null 2>&1; then
-  warn "De Caddy-configuratie is ongeldig. De vorige versie wordt teruggezet."
-  caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile 2>&1 | tail -5 || true
-  [ -n "$BACKUP" ] && cp "$BACKUP" /etc/caddy/Caddyfile
+# Valideren als gebruiker caddy, zodat aangemaakte logbestanden van caddy zijn
+validate() { sudo -u caddy caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile; }
+restore() {
+  warn "De Caddy-configuratie werkt niet. De vorige versie wordt teruggezet."
+  if [ -n "$BACKUP" ]; then cp "$BACKUP" /etc/caddy/Caddyfile; fi
+  chown -R caddy:caddy /var/log/caddy
+  systemctl restart caddy || true
   exit 1
+}
+if ! validate >/dev/null 2>&1; then
+  validate 2>&1 | tail -5 || true
+  restore
 fi
+chown -R caddy:caddy /var/log/caddy
 systemctl enable caddy >/dev/null 2>&1
-systemctl reload caddy 2>/dev/null || systemctl restart caddy
+if ! systemctl reload caddy 2>/dev/null; then
+  systemctl restart caddy || restore
+fi
+sleep 2
+systemctl is-active --quiet caddy || restore
 
 # Firewall: poort 80 en 443 open laten als ufw actief is
 if command -v ufw >/dev/null && ufw status 2>/dev/null | grep -q 'Status: active'; then
